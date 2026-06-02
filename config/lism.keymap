@@ -51,9 +51,9 @@
             display-name = "Default Layer";
             bindings = <
                 &kp Q            &kp W              &kp E                 &kp R                   &kp T                                                  &kp Y        &kp U            &kp I              &kp O               &kp P
-                &mt LCTRL A      &mt LALT S         &mt LSHIFT D          &mt LGUI F              &mt LCTRL G                                            &mt RCTRL H  &mt RGUI J       &mt RSHIFT K       &mt RALT L          &lt 3 SEMICOLON
+                &mt LCTRL A      &mt LALT S         &mt LSHIFT D          &mt LGUI F              &mt LCTRL G                                            &mt RCTRL H  &mt RGUI J       &kp K              &mt RALT L          &lt 3 MINUS
                 &kp Z            &kp X              &kp C                 &kp V                   &kp B                                                  &kp N        &kp M            &kp COMMA          &kp DOT             &mt RSHIFT SLASH
-                &kp LSHIFT       &kp LALT           &kp TAB               &kp LS(LG(N4))          &lt 2 SPACE       &lt 3 ESC           &lt 3 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))   &kp F7             &tog 1              &lt 4 F12
+                &kp LSHIFT       &kp LALT           &kp TAB               &kp LS(LG(N4))          &lt 2 SPACE       &lt 3 ESC           &lt 3 BACKSPACE  &lt 2 ENTER  &kp LS(LG(N4))   &kp BACKSLASH      &lt 1 RC(SPACE)     &lt 4 F12
             >;
             sensor-bindings = <&encoder_msc SCRL_DOWN SCRL_UP>;
         };
@@ -61,9 +61,9 @@
         layer_1 {
             display-name = "Mouse Layer";
             bindings = <
-                &trans           &trans             &trans                &trans                  &trans                                                 &kp SPACE    &kp RG(LEFT)     &kp RG(RIGHT)      &mkp MB3            &trans
-                &mkp MB5         &trans             &trans                &trans                  &trans                                                 &kp LG(UP)   &mkp MB1         &mkp MB2           &msc SCRL_UP        &msc SCRL_DOWN
-                &mkp MB4         &trans             &trans                &trans                  &trans                                                 &kp LG(DOWN) &kp LEFT         &kp UP             &kp RIGHT           &trans
+                &trans           &trans             &trans                &trans                  &trans                                                 &kp RG(LEFT) &kp LG(DOWN)     &kp LG(UP)         &kp RG(RIGHT)       &trans
+                &trans           &kp S              &kp D                 &trans                  &kp G                                                  &kp H        &mkp MB1         &mkp MB2           &msc SCRL_UP        &msc SCRL_DOWN
+                &trans           &trans             &trans                &trans                  &trans                                                 &trans       &trans           &trans             &trans              &mkp MB3
                 &trans           &trans             &trans                &trans                  &trans            &trans              &trans           &trans       &trans           &kp DOWN           &trans              &kp LG(W)
             >;
         };
@@ -72,8 +72,8 @@
             display-name = "Number Layer";
             bindings = <
                 &trans           &kp NUMBER_7       &kp NUMBER_8          &kp NUMBER_9            &kp EQUAL                                              &kp F1       &kp F2           &kp F7             &kp F10             &kp RSHIFT
-                &kp LS(N8)       &mt LALT NUMBER_4  &mt LSHIFT NUMBER_5   &mt LGUI NUMBER_6       &mt LCTRL MINUS                                        &mkp MB1     &kp LEFT         &kp UP             &kp RIGHT           &kp RGUI
-                &kp SLASH        &kp NUMBER_1       &kp NUMBER_2          &kp NUMBER_3            &kp LS(EQUAL)                                          &mkp MB2     &none            &kp DOWN           &none               &kp RALT
+                &mt LCTRL NUMBER_8 &mt LALT NUMBER_4 &mt LSHIFT NUMBER_5  &mt LGUI NUMBER_6       &mt LCTRL MINUS                                        &kp LEFT     &mkp MB1         &mkp MB2           &kp RIGHT           &kp SEMICOLON
+                &kp SLASH        &kp NUMBER_1       &kp NUMBER_2          &kp NUMBER_3            &kp LS(EQUAL)                                          &kp RA(LEFT) &kp RA(DOWN)     &kp RA(UP)         &kp RA(RIGHT)       &kp RALT
                 &trans           &kp DOT            &kp NUMBER_0          &trans                  &kp LANG2         &trans              &trans           &kp LANG1    &trans           &kp RS(RC(TAB))    &kp RC(TAB)         &kp F12
             >;
             sensor-bindings = <&encoder_kp C_VOL_UP C_VOL_DN>;
@@ -83,8 +83,8 @@
             display-name = "Mark Layer";
             bindings = <
                 &kp LS(LG(N4))   &kp F4             &kp LS(N9)            &kp LS(N0)              &none                                                  &kp LS(GRAVE) &kp LS(N1)      &kp LS(N2)         &kp LS(N3)          &kp LS(N4)
-                &emoji           &kp F5             &kp LEFT_BRACKET      &kp RIGHT_BRACKET       &none                                                  &kp GRAVE    &kp LS(MINUS)    &kp SINGLE_QUOTE   &kp LS(SINGLE_QUOTE) &kp BACKSLASH
-                &kp KP_NUMLOCK   &kp F11            &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)   &none                                                  &kp LS(BACKSLASH) &kp LS(N5) &kp LS(N6)         &kp LS(N7)          &kp LS(N8)
+                &emoji           &kp F5             &kp LBKT              &kp RBKT                &none                                                  &kp GRAVE    &kp LS(MINUS)    &kp SQT            &kp LS(SQT)         &kp BSLH
+                &kp KP_NUMLOCK   &kp F11            &kp LS(LBKT)          &kp LS(RBKT)            &none                                                  &kp LS(BSLH) &kp LS(N5)       &kp LS(N6)         &kp LS(N7)          &kp LS(N8)
                 &trans           &trans             &kp NUMBER_0          &trans                  &kp SPACE         &trans              &trans           &kp ENTER    &trans           &none              &none               &kp F12
             >;
         };
@@ -92,10 +92,10 @@
         layer_4 {
             display-name = "Device Layer";
             bindings = <
-                &none            &none              &none                 &none                   &bt BT_CLR                                             &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_SEL 4
-                &none            &none              &none                 &none                   &none                                                  &kp LEFT     &kp DOWN         &kp UP             &kp RIGHT           &none
-                &sys_reset       &none              &none                 &none                   &none                                                  &kp HOME     &kp END          &none              &none               &sys_reset
-                &bootloader      &bt BT_CLR_ALL     &none                 &none                   &none             &none               &studio_unlock   &none        &none            &none              &none               &bootloader
+                &kp F1           &kp F2             &kp F3                &kp F4                  &bt BT_CLR                                             &bt BT_SEL 0 &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_SEL 4
+                &mt LCTRL F5     &kp F6             &kp F7                &kp F8                  &sys_reset                                             &kp LEFT     &kp DOWN         &kp UP             &kp RIGHT           &kp DELETE
+                &kp F9           &kp F10            &kp F11               &kp F12                 &none                                                  &kp HOME     &kp END          &kp C_VOL_UP       &kp C_VOL_DN        &sys_reset
+                &kp LSHIFT       &kp LALT           &kp TAB               &bt BT_CLR_ALL          &bootloader       &none               &studio_unlock   &none        &none            &none              &none               &bootloader
             >;
         };
 
